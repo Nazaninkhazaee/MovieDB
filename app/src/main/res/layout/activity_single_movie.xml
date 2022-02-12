@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".single_movie_details.SingleMovie">
+    tools:context=".ui.single_movie_details.SingleMovie">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -163,7 +163,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="@string/_130_000"
+                            android:text="130,000"
                             android:textSize="12sp"/>
 
                     </LinearLayout>
@@ -186,7 +186,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="@string/_130_000"
+                            android:text="130,000"
                             android:textSize="12sp"/>
 
                     </LinearLayout>
