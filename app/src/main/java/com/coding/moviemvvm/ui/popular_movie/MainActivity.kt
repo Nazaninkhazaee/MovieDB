@@ -1,4 +1,4 @@
-package com.coding.moviemvvm.ui
+package com.coding.moviemvvm.ui.popular_movie
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
