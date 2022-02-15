@@ -17,8 +17,7 @@ import com.coding.moviemvvm.data.api.POSTER_BASE_URL
 import com.coding.moviemvvm.ui.single_movie_details.SingleMovieActivity
 import kotlinx.android.synthetic.main.movie_list_item.view.*
 
-class PopularMoviePagedListAdapter (public val context: Context) : PagedListAdapter<Movie, RecyclerView.ViewHolder>(MovieDiffCallback()) {
-
+class PopularMoviePagedListAdapter(public val context: Context) : PagedListAdapter<Movie, RecyclerView.ViewHolder>(MovieDiffCallback()) {
 
     val MOVIE_VIEW_TYPE = 1
     val NETWORK_VIEW_TYPE = 2
@@ -64,6 +63,9 @@ class PopularMoviePagedListAdapter (public val context: Context) : PagedListAdap
             MOVIE_VIEW_TYPE
         }
     }
+
+
+
 
     class MovieDiffCallback : DiffUtil.ItemCallback<Movie>() {
         override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
@@ -140,4 +142,8 @@ class PopularMoviePagedListAdapter (public val context: Context) : PagedListAdap
         }
 
     }
+
+
+
+
 }
