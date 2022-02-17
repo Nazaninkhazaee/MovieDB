@@ -15,6 +15,7 @@ import com.coding.moviemvvm.data.api.TheMovieDBInterface
 import com.coding.moviemvvm.data.repository.NetworkState
 import com.coding.moviemvvm.ui.single_movie_details.SingleMovieActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.header_layout.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainActivityViewModel
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tvToolbar.setText("Popular Movies")
 
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
 
