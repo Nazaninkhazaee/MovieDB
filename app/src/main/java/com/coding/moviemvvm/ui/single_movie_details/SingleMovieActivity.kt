@@ -14,6 +14,7 @@ import com.coding.moviemvvm.data.api.TheMovieDBInterface
 import com.coding.moviemvvm.data.repository.NetworkState
 import com.coding.moviemvvm.data.vo.MovieDetails
 import kotlinx.android.synthetic.main.activity_single_movie.*
+import kotlinx.android.synthetic.main.header_layout.*
 import java.text.NumberFormat
 import java.util.*
 
@@ -34,16 +35,18 @@ class SingleMovieActivity : AppCompatActivity() {
 
         viewModel.movieDetails.observe(this, androidx.lifecycle.Observer {
             bindUI(it)
+            tvToolbar.setText(it.title)
         })
         viewModel.networkState.observe(this, androidx.lifecycle.Observer {
             progress_bar.visibility = if (it == NetworkState.LOADING) View.VISIBLE else View.GONE
             txt_error.visibility = if (it == NetworkState.ERROR) View.VISIBLE else View.GONE
         })
+        btnBack.visibility = View.VISIBLE
+        btnBack.setOnClickListener(View.OnClickListener { finish() })
 
     }
 
     fun bindUI( it: MovieDetails){
-        movie_title.text = it.title
         movie_tagline.text = it.tagline
         movie_release_date.text = it.releaseDate
         movie_rating.text = it.rating.toString()

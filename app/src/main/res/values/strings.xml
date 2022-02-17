@@ -14,4 +14,5 @@
     <string name="overview">Overview</string>
     <string name="connection_problem">Connection Problem!!</string>
     <string name="error_message">Error Message</string>
+    <string name="description"> desc </string>
 </resources>
