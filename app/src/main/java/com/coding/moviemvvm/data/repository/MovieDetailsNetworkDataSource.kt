@@ -42,7 +42,7 @@ class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterfac
         }
 
         catch (e: Exception){
-            Log.e("MovieDetailsDataSource",e.message.toString())
+            Log.e("MovieDetailsDataSource", e.message.toString())
         }
 
 

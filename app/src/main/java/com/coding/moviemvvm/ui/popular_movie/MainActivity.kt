@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-
     }
+
 
     private fun getViewModel(): MainActivityViewModel {
         return ViewModelProviders.of(this, object : ViewModelProvider.Factory {
@@ -72,4 +72,5 @@ class MainActivity : AppCompatActivity() {
             }
         })[MainActivityViewModel::class.java]
     }
+
 }

@@ -8,7 +8,8 @@ enum class Status {
 
 }
 
-class NetworkState (val status: Status, val msg: String) {
+class NetworkState(val status: Status, val msg: String) {
+
     companion object {
 
         val LOADED: NetworkState

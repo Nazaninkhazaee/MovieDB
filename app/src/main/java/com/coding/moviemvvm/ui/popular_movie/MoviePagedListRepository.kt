@@ -12,7 +12,8 @@ import com.coding.moviemvvm.data.repository.NetworkState
 import com.coding.moviemvvm.data.vo.Movie
 import io.reactivex.disposables.CompositeDisposable
 
-class MoviePagedListRepository (private val apiService : TheMovieDBInterface){
+class MoviePagedListRepository (private val apiService : TheMovieDBInterface) {
+
     lateinit var moviePagedList: LiveData<PagedList<Movie>>
     lateinit var moviesDataSourceFactory: MovieDataSourceFactory
 
