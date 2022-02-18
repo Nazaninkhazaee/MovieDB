@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -26,7 +27,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvToolbar.setText("Popular Movies")
+
+        val typeface = ResourcesCompat.getFont(this, R.font.quicksand_bold)
+        tvToolbar.setText("Movie Database")
+        tvToolbar.setTypeface(typeface)
+
 
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
 
