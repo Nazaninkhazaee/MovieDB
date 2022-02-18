@@ -27,12 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val typeface = ResourcesCompat.getFont(this, R.font.quicksand_bold)
-        tvToolbar.setText("Movie Database")
-        tvToolbar.setTypeface(typeface)
-
-
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
 
         movieRepository = MoviePagedListRepository(apiService)
@@ -41,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val movieAdapter = PopularMoviePagedListAdapter(this)
 
-        val gridLayoutManager = GridLayoutManager(this, 3)
+        val gridLayoutManager = GridLayoutManager(this, 2)
 
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {

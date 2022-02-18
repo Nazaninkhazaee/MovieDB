@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Movie MVVM"
 include ':app'
+
+
+
+

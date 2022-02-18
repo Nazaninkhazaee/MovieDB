@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -34,6 +36,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginStart="4dp"
             android:text="movie"
+            android:fontFamily="@font/quicksand_bold"
             android:textSize="12sp"
             android:maxLines="1"
             android:ellipsize="end"/>
@@ -45,6 +48,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginBottom="4dp"
             android:text="2019"
+            android:fontFamily="@font/quicksand_regular"
             android:maxLength="4"
             android:textSize="12sp"/>
 
