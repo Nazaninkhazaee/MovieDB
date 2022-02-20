@@ -22,7 +22,7 @@
         <ImageView
             android:id="@+id/cv_iv_movie_poster"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="230dp"
             android:scaleType="centerCrop"
             android:layout_gravity="center"
             android:src="@drawable/poster_placeholder">
@@ -37,7 +37,7 @@
             android:layout_marginStart="4dp"
             android:text="movie"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:maxLines="1"
             android:ellipsize="end"/>
 
