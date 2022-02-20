@@ -35,7 +35,6 @@ class SingleMovieActivity : AppCompatActivity() {
 
         viewModel.movieDetails.observe(this, androidx.lifecycle.Observer {
             bindUI(it)
-            tvToolbar.setText(it.title)
         })
         viewModel.networkState.observe(this, androidx.lifecycle.Observer {
             progress_bar.visibility = if (it == NetworkState.LOADING) View.VISIBLE else View.GONE
@@ -47,6 +46,7 @@ class SingleMovieActivity : AppCompatActivity() {
     }
 
     fun bindUI( it: MovieDetails){
+        tvToolbar.setText(it.title)
         movie_tagline.text = it.tagline
         movie_release_date.text = it.releaseDate
         movie_rating.text = it.rating.toString()
